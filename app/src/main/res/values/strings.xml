@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FirebaseDemo</string>
+    <dimen name="input_height">50dp</dimen>
+    <dimen name="input_top_margin">10dp</dimen>
+    <dimen name="input_margin">15dp</dimen>
+
+    <dimen name="smallTextSize">18sp</dimen>
+    <dimen name="otpInputMargin">5sp</dimen>
+
+    <string name="default_client_id">769230890477-p1gtset5mmsvsk1std8dubq1bn7v20lm.apps.googleusercontent.com</string>
+
+</resources>
