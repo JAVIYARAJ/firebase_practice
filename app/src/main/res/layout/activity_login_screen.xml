@@ -118,7 +118,7 @@
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginHorizontal="30dp"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
@@ -135,6 +135,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:src="@drawable/ic_facebook_icon" />
+
+                    <ImageView
+                        android:id="@+id/phoneRegister"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_phone_icon" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 

@@ -33,10 +33,15 @@ class LoginScreen : AppCompatActivity() {
         val email = findViewById<EditText>(R.id.userEmail);
         val password = findViewById<EditText>(R.id.userPassword);
         val loginProgressBar = findViewById<ProgressBar>(R.id.loginProgressBar);
-        val loginForgotBtn=findViewById<TextView>(R.id.loginForgotBtn);
+        val loginForgotBtn = findViewById<TextView>(R.id.loginForgotBtn);
+        val phoneRegister = findViewById<ImageView>(R.id.phoneRegister);
+
+        phoneRegister.setOnClickListener {
+            startActivity(Intent(this, ForgotPasswordScreen::class.java))
+        }
 
         loginForgotBtn.setOnClickListener {
-            startActivity(Intent(this,ForgotPasswordScreen::class.java))
+            startActivity(Intent(this, ForgotPasswordScreen::class.java))
         }
 
         val googleRegister = findViewById<ImageView>(R.id.googleRegister);
@@ -99,7 +104,6 @@ class LoginScreen : AppCompatActivity() {
             }
 
             override fun parseResult(resultCode: Int, intent: Intent?): Intent {
-                Log.d("Practice", intent?.data.toString())
                 return intent!!;
             }
         }
@@ -109,6 +113,7 @@ class LoginScreen : AppCompatActivity() {
             registerForActivityResult(
                 contract
             ) { intent ->
+
                 val task = GoogleSignIn.getSignedInAccountFromIntent(intent);
 
                 if (task.isSuccessful) {
